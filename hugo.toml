@@ -1,4 +1,4 @@
-# =====================================================================================
+﻿# =====================================================================================
 # It's recommended to use Alternate Theme Config to configure FixIt
 # Modifying this file may result in merge conflict
 # There are currently some restrictions to what a theme component can configure:
@@ -184,7 +184,7 @@ _merge = "shallow"
 # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
 [markup.highlight]
 # ~~~~~~~~~~ necessary configurations ~~~~~~~~~~
-# https://github.com/hugo-fixit/FixIt/issues/43
+# https://github.com/AIPulseStudio/hugo-theme-fixit/issues/43
 codeFences = true
 noClasses = false
 # ~~~~~~~~~~ necessary configurations ~~~~~~~~~~
@@ -873,7 +873,7 @@ layout = "dagre"
 # FixIt 0.3.15 | NEW version shortcode config
 [params.repoVersion]
 # url prefix for the release tag
-url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+url = "https://github.com/AIPulseStudio/hugo-theme-fixit/releases/tag/v"
 # project name
 name = "FixIt"
 
@@ -1008,7 +1008,7 @@ objectFit = false
 # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
 [params.githubCorner]
 enable = false
-permalink = "https://github.com/hugo-fixit/FixIt"
+permalink = "https://github.com/AIPulseStudio/hugo-theme-fixit"
 title = "View source on GitHub"
 position = "right" # ["left", "right"]
 

@@ -1,12 +1,12 @@
-# Translations for Russian
+﻿# Translations for Russian
 # Переводы на русский
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "Ошибка конфигурации\nВы еще не настроили параметр версии FixIt правильно. См. https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
-compatibilityError = "Ошибка совместимости ({{ .From }} -> {{ .To }}):\nУ вас есть несовместимое обновление. См. https://github.com/hugo-fixit/FixIt/releases"
-devVersionWarn = "Вы используете версию разработки FixIt. Пожалуйста, рассмотрите возможность использования стабильной версии.\nСм. https://github.com/hugo-fixit/FixIt/releases"
+compatibilityError = "Ошибка совместимости ({{ .From }} -> {{ .To }}):\nУ вас есть несовместимое обновление. См. https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
+devVersionWarn = "Вы используете версию разработки FixIt. Пожалуйста, рассмотрите возможность использования стабильной версии.\nСм. https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
 devEnvWarn = "Текущая среда - \"разработка\". \"Система комментариев\", \"PWA\", \"CDN\", \"отпечаток\" и \"аналитика\" будут отключены."
 quicklyUpgrade = "Быстрое обновление используйте команду: "
 # === init ===

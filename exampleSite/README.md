@@ -1,6 +1,6 @@
-# FixIt Theme - Example Site
+﻿# FixIt Theme - Example Site
 
-This is an example site for testing the [FixIt Hugo theme](https://github.com/hugo-fixit/FixIt).
+This is an example site for testing the [FixIt Hugo theme](https://github.com/AIPulseStudio/hugo-theme-fixit).
 
 ## Quick Start
 

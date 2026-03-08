@@ -1,4 +1,4 @@
-<!-- markdownlint-disable-file MD033 MD041 -->
+﻿<!-- markdownlint-disable-file MD033 MD041 -->
 ![Hugo Theme FixIt](https://fixit.lruihao.cn/images/apple-devices-preview.png)
 
 <div align="center" class="ignore">
@@ -8,14 +8,14 @@
   </p>
   English |
   <a href="/README.zh-cn.md">简体中文</a> |
-  <a href="https://fixit.lruihao.cn/zh-cn/ecosystem/hugo-fixit/fixit/?lang=chinese_traditional">繁體中文</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=french">Français</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=russian">Русский язык</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=spanish">Español</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=hindi">हिन्दी</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=deutsch">deutsch</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=korean">한국어</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/fixit/?lang=japanese">しろうと</a>
+  <a href="https://fixit.lruihao.cn/zh-cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=chinese_traditional">繁體中文</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=french">Français</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=russian">Русский язык</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=spanish">Español</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=hindi">हिन्दी</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=deutsch">deutsch</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=korean">한국어</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/AIPulseStudio/hugo-theme-fixit/?lang=japanese">しろうと</a>
 </div>
 
 <a title="FixIt website" href="https://fixit.lruihao.cn"><img align="right" alt="FixIt logo" width="70" height="70" src="https://avatars.githubusercontent.com/u/110414864?s=200&v=4"></a>
@@ -24,11 +24,11 @@
 
 > It is based on the original [LoveIt](https://github.com/dillonzq/LoveIt) Theme, [KeepIt](https://github.com/Fastbyte01/KeepIt) Theme and [LeaveIt](https://github.com/liuzc/LeaveIt) Theme.
 
-[![Build](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=Build&logo=vercel)](https://demo.fixit.lruihao.cn/)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat&label=Release&logo=github&include_prereleases)](https://github.com/hugo-fixit/FixIt/releases)
+[![Build](https://img.shields.io/github/deployments/AIPulseStudio/hugo-theme-fixit/Production?style=flat&label=Build&logo=vercel)](https://demo.fixit.lruihao.cn/)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/AIPulseStudio/hugo-theme-fixit?style=flat&label=Release&logo=github&include_prereleases)](https://github.com/AIPulseStudio/hugo-theme-fixit/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.156.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat&label=License)](/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
+[![License](https://img.shields.io/github/license/AIPulseStudio/hugo-theme-fixit?style=flat&label=License)](/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/AIPulseStudio/hugo-theme-fixit?style=social)](https://github.com/AIPulseStudio/hugo-theme-fixit)
 [![Gitee star of FixIt](https://gitee.com/lruihao/FixIt/badge/star.svg)](https://gitee.com/lruihao/FixIt/stargazers)
 
 ## Live Preview
@@ -165,7 +165,7 @@ Click the following links to generate a new repository with template:
 
 ## Multilingual and i18n
 
-FixIt supports multilingual and i18n. For more information, see the [Content Management](https://fixit.lruihao.cn/documentation/content-management/introduction#multilingual) documentation. You are welcome to [contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls).
+FixIt supports multilingual and i18n. For more information, see the [Content Management](https://fixit.lruihao.cn/documentation/content-management/introduction#multilingual) documentation. You are welcome to [contribute with a new language](https://github.com/AIPulseStudio/hugo-theme-fixit/pulls).
 
 <details>
 <summary>FixIt supports the following languages.</summary>
@@ -197,7 +197,7 @@ The FixIt theme balances **simplicity** and **extensibility** with extra [Hugo t
 <summary>Click to view.</summary>
 
 <!-- HUGO_FIXIT_COMPONENTS:START -->
-- [fixit-bundle](https://github.com/hugo-fixit/fixit-bundle)\
+- [fixit-bundle](https://github.com/AIPulseStudio/hugo-theme-fixit-bundle)\
   🌲 Bundles the FixIt core theme and all hugo-fixit components into a single component.
 - [cmpt-flyfish](https://github.com/hugo-fixit/cmpt-flyfish)\
   🐟 A canvas implemented animation effect of small fish swimming.
@@ -240,9 +240,9 @@ All feedback is welcome! Head over to the [discussions][discussions], [Pull requ
 | [FixIt QQ group][qq-group]  | QQ group: `814031017`           |
 | [Hugo FixIt Planet][zsxq]   | Paid knowledge Planet           |
 
-[discussions]: https://github.com/hugo-fixit/FixIt/discussions
-[pulls]: https://github.com/hugo-fixit/FixIt/pulls
-[issues]: https://github.com/hugo-fixit/FixIt/issues
+[discussions]: https://github.com/AIPulseStudio/hugo-theme-fixit/discussions
+[pulls]: https://github.com/AIPulseStudio/hugo-theme-fixit/pulls
+[issues]: https://github.com/AIPulseStudio/hugo-theme-fixit/issues
 [qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
 [zsxq]: https://t.zsxq.com/GgKEW
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
@@ -258,7 +258,7 @@ Also, we welcome Issue or PR to our [official-components](https://github.com/hug
 
 ## Acknowledgements
 
-Thanks to the support of [all contributors](https://github.com/hugo-fixit/FixIt/graphs/contributors)!
+Thanks to the support of [all contributors](https://github.com/AIPulseStudio/hugo-theme-fixit/graphs/contributors)!
 
 Thanks to the [Hugo DoIt](https://github.com/HEIGE-PCloud/DoIt) theme and [Hexo NexT](https://github.com/next-theme/hexo-theme-next) theme for inspiration and reference.
 

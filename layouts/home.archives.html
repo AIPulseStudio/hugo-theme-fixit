@@ -1,4 +1,4 @@
-{{- define "title" -}}
+﻿{{- define "title" -}}
   {{- .Params.Title | default (T "archives") -}}
   {{- if .Site.Params.withSiteTitle }} {{ .Site.Params.titleDelimiter }} {{ .Site.Title }}{{- end -}}
 {{- end -}}
@@ -15,7 +15,7 @@
         {{- .Params.Title | default (T "archives") }} <sup>{{ $pages.Len }}</sup>
       </h1>
       {{- /* Total word count */ -}}
-      {{- /* See https://github.com/hugo-fixit/FixIt/issues/124 */ -}}
+      {{- /* See https://github.com/AIPulseStudio/hugo-theme-fixit/issues/124 */ -}}
       {{- $localData := newScratch -}}
       {{- range $pages -}}
         {{- $localData.Add "totalWordCount" .WordCount -}}

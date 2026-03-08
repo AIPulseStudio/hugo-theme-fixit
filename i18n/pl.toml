@@ -1,12 +1,12 @@
-# Translations for Polish
+﻿# Translations for Polish
 # Tłumaczenie na język polski
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "Błąd konfiguracji\nNie skonfigurowałeś jeszcze poprawnie parametru wersji FixIt. Zobacz https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
-compatibilityError = "Błąd zgodności ({{ .From }} -> {{ .To }}):\nMasz niekompatybilną aktualizację. Zobacz https://github.com/hugo-fixit/FixIt/releases"
-devVersionWarn = "Używasz wersji deweloperskiej FixIt. Proszę rozważyć użycie stabilnej wersji.\nZobacz https://github.com/hugo-fixit/FixIt/releases"
+compatibilityError = "Błąd zgodności ({{ .From }} -> {{ .To }}):\nMasz niekompatybilną aktualizację. Zobacz https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
+devVersionWarn = "Używasz wersji deweloperskiej FixIt. Proszę rozważyć użycie stabilnej wersji.\nZobacz https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
 devEnvWarn = "Obecne środowisko to \"rozwój\". \"System komentarzy\", \"PWA\", \"CDN\", \"odcisk palca\" i \"analiza\" będą wyłączone."
 quicklyUpgrade = "Szybka aktualizacja użyj polecenia: "
 # === init ===

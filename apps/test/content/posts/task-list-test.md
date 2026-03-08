@@ -1,4 +1,4 @@
----
+﻿---
 title: Task List Rendering Test
 date: 2026-02-28T08:54:02+08:00
 collections:
@@ -44,7 +44,7 @@ This post tests the rendering of task lists in Markdown.
 
 - [ ] Task with **bold** and _italic_ text
 - [x] Task with `inline code`
-- [ ] Task with [some link](https://github.com/hugo-fixit/FixIt)
+- [ ] Task with [some link](https://github.com/AIPulseStudio/hugo-theme-fixit)
 - [ ] Multi-line task
   that spans across multiple lines
   and still renders correctly as a single list item.

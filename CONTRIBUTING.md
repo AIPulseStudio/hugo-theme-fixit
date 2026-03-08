@@ -1,4 +1,4 @@
-# CONTRIBUTING
+﻿# CONTRIBUTING
 
 Make sure that you follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) while contributing and engaging in the discussions.
 
@@ -25,7 +25,7 @@ First, fork this repository by clicking the fork button.
 Next, clone your forked repo.
 
 ```bash
-git clone https://github.com/hugo-fixit/FixIt.git && cd FixIt
+git clone https://github.com/AIPulseStudio/hugo-theme-fixit.git && cd FixIt
 ```
 
 Then, install the dev dependencies.
@@ -114,7 +114,7 @@ FixIt/
 - Update documentation if needed
 - Submit a pull request with a clear description
 
-Finally, create a new pull request at <https://github.com/hugo-fixit/FixIt/pulls> to submit your contribution 🎉
+Finally, create a new pull request at <https://github.com/AIPulseStudio/hugo-theme-fixit/pulls> to submit your contribution 🎉
 
 ## Git Commit Guidelines
 

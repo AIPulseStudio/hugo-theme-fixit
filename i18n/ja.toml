@@ -1,12 +1,12 @@
-# Translations for Japanese
+﻿# Translations for Japanese
 # 日本語翻訳
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "設定ファイルエラー\nまだ FixIt のバージョンパラメータを正しく設定していません。 https://fixit.lruihao.cn/zh-cn/documentation/basics/#theme-configuration を参照してください"
-compatibilityError = "互換性エラー ({{ .From }} -> {{ .To }}):\n互換性のない更新が行われました。 https://github.com/hugo-fixit/FixIt/releases を参照してください"
-devVersionWarn = "開発版の FixIt を使用しています。安定版の使用を検討してください。\n https://github.com/hugo-fixit/FixIt/releases を参照"
+compatibilityError = "互換性エラー ({{ .From }} -> {{ .To }}):\n互換性のない更新が行われました。 https://github.com/AIPulseStudio/hugo-theme-fixit/releases を参照してください"
+devVersionWarn = "開発版の FixIt を使用しています。安定版の使用を検討してください。\n https://github.com/AIPulseStudio/hugo-theme-fixit/releases を参照"
 devEnvWarn = "現在の実行環境は「development」です。「コメントシステム」、「PWA」、「CDN」、「フィンガープリント」、「統計」は有効になりません。"
 quicklyUpgrade = "コマンドを使用して迅速にアップグレード："
 # === init ===

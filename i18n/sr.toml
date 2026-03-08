@@ -1,12 +1,12 @@
-# Translations for Serbian
+﻿# Translations for Serbian
 # Превод на Српски
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "Грешка у конфигурацији\nНисте правилно конфигурисали параметар верзије FixIt. Погледајте https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
-compatibilityError = "Грешка у компатибилности ({{ .From }} -> {{ .To }}):\nИмате некомпатибилно ажурирање. Погледајте https://github.com/hugo-fixit/FixIt/releases"
-devVersionWarn = "Користите развојну верзију FixIt. Размотрите коришћење стабилне верзије.\nПогледајте https://github.com/hugo-fixit/FixIt/releases"
+compatibilityError = "Грешка у компатибилности ({{ .From }} -> {{ .To }}):\nИмате некомпатибилно ажурирање. Погледајте https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
+devVersionWarn = "Користите развојну верзију FixIt. Размотрите коришћење стабилне верзије.\nПогледајте https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
 devEnvWarn = "Тренутно окружење је \"развојно\". \"Систем коментара\", \"PWA\", \"CDN\", \"отисак прста\" и \"аналитика\" ће бити онемогућени."
 quicklyUpgrade = "Брзо ажурирање користите команду: "
 # === init ===

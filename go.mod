@@ -1,3 +1,3 @@
-module github.com/hugo-fixit/FixIt
+module github.com/AIPulseStudio/hugo-theme-fixit
 
 go 1.19

@@ -1,4 +1,4 @@
-# Security Policy
+﻿# Security Policy
 
 ## Supported Versions
 
@@ -40,7 +40,7 @@ We take security seriously and appreciate your help in keeping FixIt secure.
 
 ### How to Report
 
-1. **Create an Issue**: Report vulnerabilities at https://github.com/hugo-fixit/FixIt/issues
+1. **Create an Issue**: Report vulnerabilities at https://github.com/AIPulseStudio/hugo-theme-fixit/issues
 2. **Private Disclosure**: For sensitive security issues, email the maintainers directly
 3. **Include Details**: Provide clear steps to reproduce the vulnerability
 

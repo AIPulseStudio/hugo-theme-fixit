@@ -1,11 +1,11 @@
-# Translations for Vietnamese
+﻿# Translations for Vietnamese
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "Lỗi cấu hình\nBạn chưa cấu hình tham số phiên bản FixIt đúng cách. Xem https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
-compatibilityError = "Lỗi tương thích ({{ .From }} -> {{ .To }}):\nBạn có một bản cập nhật không tương thích. Xem https://github.com/hugo-fixit/FixIt/releases"
-devVersionWarn = "Bạn đang sử dụng một phiên bản phát triển của FixIt. Vui lòng xem xét sử dụng một phiên bản ổn định.\nXem https://github.com/hugo-fixit/FixIt/releases"
+compatibilityError = "Lỗi tương thích ({{ .From }} -> {{ .To }}):\nBạn có một bản cập nhật không tương thích. Xem https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
+devVersionWarn = "Bạn đang sử dụng một phiên bản phát triển của FixIt. Vui lòng xem xét sử dụng một phiên bản ổn định.\nXem https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
 devEnvWarn = "Môi trường hiện tại là \"development\". \"Hệ thống bình luận\", \"PWA\", \"CDN\", \"vân tay\" và \"thống kê\" sẽ bị vô hiệu hóa."
 quicklyUpgrade = "Nâng cấp nhanh bằng lệnh: "
 # === init ===

@@ -14,10 +14,10 @@
   "homepage": "https://fixit.lruihao.cn",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hugo-fixit/FixIt.git"
+    "url": "git+https://github.com/AIPulseStudio/hugo-theme-fixit.git"
   },
   "bugs": {
-    "url": "https://github.com/hugo-fixit/FixIt/issues"
+    "url": "https://github.com/AIPulseStudio/hugo-theme-fixit/issues"
   },
   "keywords": [
     "hugo",

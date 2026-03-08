@@ -1,4 +1,4 @@
-// TODO use ESLint to check the code style
+﻿// TODO use ESLint to check the code style
 import Util from './util';
 import FileTree from './lib/file-tree.js'
 
@@ -754,7 +754,7 @@ class FixIt {
 
   /**
    * It's a dirty hack to fix the bug of APlayer and smoothScroll. 
-   * see https://github.com/hugo-fixit/FixIt/issues/292
+   * see https://github.com/AIPulseStudio/hugo-theme-fixit/issues/292
    */
   fixTocScroll() {
     if (typeof APlayer === 'function') {

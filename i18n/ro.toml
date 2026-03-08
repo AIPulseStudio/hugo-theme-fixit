@@ -1,12 +1,12 @@
-# Translations for Romanian
+﻿# Translations for Romanian
 # Traduceri pentru limba română
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === init ===
 [init]
 configurationError = "Eroare de configurare\nNu ați configurat corect parametrul versiunii FixIt. Consultați https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
-compatibilityError = "Eroare de compatibilitate ({{ .From }} -> {{ .To }}):\nAveți o actualizare incompatibilă. Consultați https://github.com/hugo-fixit/FixIt/releases"
-devVersionWarn = "Utilizați o versiune de dezvoltare a FixIt. Vă rugăm să luați în considerare utilizarea unei versiuni stabile.\nConsultați https://github.com/hugo-fixit/FixIt/releases"
+compatibilityError = "Eroare de compatibilitate ({{ .From }} -> {{ .To }}):\nAveți o actualizare incompatibilă. Consultați https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
+devVersionWarn = "Utilizați o versiune de dezvoltare a FixIt. Vă rugăm să luați în considerare utilizarea unei versiuni stabile.\nConsultați https://github.com/AIPulseStudio/hugo-theme-fixit/releases"
 devEnvWarn = "Mediul curent este \"dezvoltare\". \"Sistemul de comentarii\", \"PWA\", \"CDN\", \"amprentă\" și \"analize\" vor fi dezactivate."
 quicklyUpgrade = "Actualizare rapidă utilizați comanda: "
 # === init ===
