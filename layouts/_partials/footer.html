@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>{{ .Site.Params.logo.title | default .Site.Title }}</h3>
+      <p>{{ .Site.Params.description }}</p>
+    </div>
+    <div class="footer-section">
+      <h3>Links</h3>
+      <ul class="footer-links">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Social</h3>
+      <div class="footer-social">
+        {{ with .Site.Params.social.twitter }}<a href="{{ . }}" target="_blank">𝕏</a>{{ end }}
+        {{ with .Site.Params.social.youtube }}<a href="{{ . }}" target="_blank">▶</a>{{ end }}
+        {{ with .Site.Params.social.instagram }}<a href="{{ . }}" target="_blank">📷</a>{{ end }}
+        {{ with .Site.Params.social.facebook }}<a href="{{ . }}" target="_blank">f</a>{{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+  </div>
+</footer>

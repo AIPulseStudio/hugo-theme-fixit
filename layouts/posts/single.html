@@ -1,0 +1,728 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "content" }}
+<div class="libertadores-article">
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="header-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="header-container">
+      <!-- Breadcrumb -->
+      <nav class="article-breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">→</span>
+        <a href="/posts/">Posts</a>
+        <span class="breadcrumb-sep">→</span>
+        <span class="breadcrumb-current">{{ .Title }}</span>
+      </nav>
+
+      <!-- Tags -->
+      <div class="article-tags">
+        {{ if .Params.category }}
+        <span class="tag-category">{{ .Params.category }}</span>
+        {{ end }}
+        {{ if .Params.team }}
+        <span class="tag-team">{{ .Params.team }}</span>
+        {{ end }}
+      </div>
+
+      <!-- Title -->
+      <h1 class="article-title">{{ .Title }}</h1>
+
+      <!-- Meta -->
+      <div class="article-meta">
+        <span class="meta-icon">📅</span>
+        <span class="meta-text">{{ .Date.Format "02/01/2006" }}</span>
+        {{ if .Params.author }}
+        <span class="meta-divider">|</span>
+        <span class="meta-icon">✍️</span>
+        <span class="meta-text">{{ .Params.author }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Image -->
+  {{ if and .Params.images (gt (len .Params.images) 0) }}
+  <div class="featured-image">
+    <img src="{{ index .Params.images 0 | relURL }}" alt="{{ .Title }}">
+  </div>
+  {{ else if and .Params.image (ne .Params.image "") }}
+  <div class="featured-image">
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+  </div>
+  {{ end }}
+
+  <!-- Article Content -->
+  <div class="article-wrapper">
+    <div class="article-main">
+      <!-- Share Panel -->
+      <aside class="share-panel">
+        <span class="share-label">Share</span>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="share-btn share-twitter">
+            <span>𝕏</span>
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="share-btn share-facebook">
+            <span>f</span>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" class="share-btn share-linkedin">
+            <span>in</span>
+          </a>
+          <a href="https://wa.me/?text={{ .Title }}%20{{ .Permalink }}" target="_blank" class="share-btn share-whatsapp">
+            <span>📱</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <article class="article-content">
+        <!-- Lead -->
+        {{ if .Description }}
+        <p class="article-lead">{{ .Description }}</p>
+        {{ end }}
+
+        <!-- Body -->
+        <div class="article-body">
+          {{ .Content }}
+        </div>
+
+        <!-- Tags -->
+        {{ if .Params.tags }}
+        <div class="article-footer-tags">
+          <span class="tags-label">Tags:</span>
+          <div class="tags-list">
+            {{ range .Params.tags }}
+            <span class="tag-item">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+
+  <!-- Author Card -->
+  {{ if .Params.author }}
+  <div class="author-section">
+    <div class="author-card">
+      <div class="author-avatar">
+        <span class="avatar-initial">{{ substr .Params.author 0 1 }}</span>
+      </div>
+      <div class="author-info">
+        <span class="author-role">Author</span>
+        <h3 class="author-name">{{ .Params.author }}</h3>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Related Articles -->
+  {{ $related := .Site.RegularPages.Related . | first 6 }}
+  {{ if gt (len $related) 0 }}
+  <section class="related-section">
+    <div class="related-container">
+      <div class="related-header">
+        <span class="related-icon">📰</span>
+        <h2 class="related-title">Related News</h2>
+      </div>
+      <div class="related-grid">
+        {{ range $related }}
+        <a href="{{ .Permalink }}" class="related-card">
+          <div class="related-image">
+            {{ if and .Params.images (gt (len .Params.images) 0) }}
+            <img src="{{ index .Params.images 0 | relURL }}" alt="{{ .Title }}" loading="lazy">
+            {{ else if and .Params.image (ne .Params.image "") }}
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
+            {{ else }}
+            <img src="/images/default-libertadores.svg" alt="{{ .Title }}" loading="lazy">
+            {{ end }}
+          </div>
+          <div class="related-info">
+            <h4 class="related-card-title">{{ .Title }}</h4>
+            <span class="related-date">{{ .Date.Format "02/01/2006" }}</span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}
+
+{{ define "custom-head" }}
+<style>
+  :root {
+    --lib-yellow: #FFD93D;
+    --lib-blue: #00D9FF;
+    --lib-red: #FF6B6B;
+    --lib-green: #6BCB77;
+    --fiesta-bg: #FFF9E6;
+    --text-dark: #2D3436;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background: var(--fiesta-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  .navbar {
+    background: white;
+    border-bottom: 4px solid var(--lib-yellow);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    font-size: 32px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--lib-blue);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    background: var(--lib-yellow);
+  }
+
+  .article-header {
+    background: linear-gradient(135deg, var(--lib-red) 0%, var(--lib-blue) 100%);
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+
+  .shape-1 {
+    width: 350px;
+    height: 350px;
+    top: -100px;
+    right: 5%;
+    background: var(--lib-yellow);
+  }
+
+  .shape-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -80px;
+    left: 10%;
+    background: var(--lib-green);
+  }
+
+  .header-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .article-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .article-breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .article-breadcrumb a:hover {
+    color: white;
+  }
+
+  .breadcrumb-sep {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .breadcrumb-current {
+    color: white;
+    font-weight: 600;
+  }
+
+  .article-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-category {
+    background: var(--lib-yellow);
+    color: var(--text-dark);
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tag-team {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .article-title {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .meta-divider {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .featured-image {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .article-main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+  }
+
+  .share-panel {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .share-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .share-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+
+  .share-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .share-twitter { background: #000; }
+  .share-facebook { background: #1877F2; }
+  .share-linkedin { background: #0077B5; }
+  .share-whatsapp { background: #25D366; }
+
+  .article-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .article-lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid var(--lib-yellow);
+  }
+
+  .article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .article-body h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--lib-red);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--lib-yellow);
+  }
+
+  .article-body h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 2rem 0 0.75rem;
+  }
+
+  .article-body p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-body a {
+    color: var(--lib-red);
+    text-decoration: none;
+    border-bottom: 2px solid var(--lib-red);
+    transition: all 0.3s;
+  }
+
+  .article-body a:hover {
+    color: var(--lib-blue);
+    border-color: var(--lib-blue);
+  }
+
+  .article-footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+
+  .tags-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag-item {
+    background: rgba(255, 107, 107, 0.1);
+    color: var(--lib-red);
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .author-section {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+  }
+
+  .author-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--lib-red) 0%, var(--lib-blue) 100%);
+    border-radius: 16px;
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--lib-red);
+  }
+
+  .author-info {
+    flex: 1;
+  }
+
+  .author-role {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.25rem;
+  }
+
+  .author-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .related-section {
+    background: rgba(0, 217, 255, 0.1);
+    padding: 3rem 2rem;
+  }
+
+  .related-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .related-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .related-icon {
+    font-size: 1.5rem;
+  }
+
+  .related-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+  }
+
+  .related-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+  }
+
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .related-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--lib-red) 0%, var(--lib-blue) 100%);
+  }
+
+  .related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .related-info {
+    padding: 0.875rem;
+  }
+
+  .related-card-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .related-date {
+    font-size: 0.7rem;
+    color: #888;
+  }
+
+  .footer {
+    background: var(--lib-blue);
+    color: white;
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .footer-section h3 {
+    color: var(--lib-yellow);
+    margin-bottom: 15px;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--lib-yellow);
+  }
+
+  .footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 1024px) {
+    .related-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .article-title {
+      font-size: 1.75rem;
+    }
+
+    .article-wrapper {
+      padding: 2rem 1rem;
+    }
+
+    .article-main {
+      grid-template-columns: 1fr;
+    }
+
+    .share-panel {
+      display: none;
+    }
+
+    .article-content {
+      padding: 1.5rem;
+    }
+
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .article-title {
+      font-size: 1.5rem;
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{{ end }}

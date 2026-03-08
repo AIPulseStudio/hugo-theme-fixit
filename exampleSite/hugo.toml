@@ -1,0 +1,73 @@
+baseURL = "http://localhost:1315/"
+languageCode = 'en-us'
+title = "Copa Libertadores"
+
+#googleAnalytics = "G-C3P9MR22V6"
+
+[module]
+[[module.mounts]]
+source = "content"
+target = "content"
+
+[[module.mounts]]
+source = "../layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "../static"
+target = "static"
+
+[params]
+version = "0.4.X"
+description = "Copa Libertadores news and updates"
+keywords = "Copa Libertadores, South American football, CONMEBOL, soccer, futbol"
+
+[params.author]
+name = "Libertadores News"
+email = "news@libertadores.com"
+link = "https://libertadores.com"
+
+[params.logo]
+navlogo = "⚽"
+text = "🇧🇷"
+title = "COPA LIBERTADORES"
+subtitle = "¡Pasión latinoamericana!"
+
+[params.header]
+desktopMode = "sticky"
+mobileMode = "auto"
+
+[params.header.title]
+logo = ""
+name = "Libertadores"
+pre = "🏆"
+post = ""
+
+[params.header.subtitle]
+name = "¡Pasión latinoamericana!"
+
+[params.footer]
+enable = true
+since = 2024
+license = "MIT"
+
+[params.social]
+twitter = "https://twitter.com"
+youtube = "https://youtube.com"
+instagram = "https://instagram.com"
+facebook = "https://facebook.com"
+
+[params.feed]
+limit = 10
+
+[menu]
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 2

@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      {{ if .Site.Params.logo.navlogo }}
+        {{ if or (hasPrefix .Site.Params.logo.navlogo "/") (hasPrefix .Site.Params.logo.navlogo "http") }}
+        <img src="{{ .Site.Params.logo.navlogo | relURL }}" alt="{{ .Site.Title }}" class="logo-img">
+        {{ else }}
+        <span class="logo-icon">{{ .Site.Params.logo.navlogo }}</span>
+        {{ end }}
+      {{ else }}
+        <span class="logo-icon">{{ .Site.Params.logo.icon | default "⚽" }}</span>
+      {{ end }}
+      <span class="logo-name">{{ .Site.Params.logo.text | default .Site.Title }}</span>
+    </a>
+    <ul class="nav-menu">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

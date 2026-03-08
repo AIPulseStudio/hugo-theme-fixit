@@ -1,0 +1,70 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient with Latin American colors -->
+  <defs>
+    <linearGradient id="libGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD93D"/>
+      <stop offset="50%" style="stop-color:#00D9FF"/>
+      <stop offset="100%" style="stop-color:#FF6B6B"/>
+    </linearGradient>
+    <pattern id="confetti" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2" fill="#FFD93D" opacity="0.6"/>
+      <circle cx="25" cy="15" r="2" fill="#00D9FF" opacity="0.6"/>
+      <circle cx="15" cy="30" r="2" fill="#FF6B6B" opacity="0.6"/>
+      <circle cx="35" cy="35" r="2" fill="#6BCB77" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFF9E6"/>
+  <rect width="400" height="300" fill="url(#confetti)"/>
+
+  <!-- Trophy silhouette -->
+  <g transform="translate(200, 130)">
+    <!-- Trophy base -->
+    <ellipse cx="0" cy="70" rx="50" ry="10" fill="#FFD93D"/>
+    <rect x="-40" y="50" width="80" height="20" fill="#00D9FF"/>
+
+    <!-- Trophy stem -->
+    <rect x="-10" y="20" width="20" height="30" fill="#FF6B6B"/>
+
+    <!-- Trophy cup -->
+    <path d="M -50 -40 Q -60 20 0 30 Q 60 20 50 -40 Z" fill="url(#libGradient)" stroke="#2D3436" stroke-width="2"/>
+    <ellipse cx="0" cy="-40" rx="50" ry="15" fill="#FFD93D" stroke="#2D3436" stroke-width="2"/>
+
+    <!-- Trophy handles -->
+    <path d="M -50 -20 Q -70 -30 -70 -10 Q -70 10 -50 0" fill="none" stroke="#00D9FF" stroke-width="6"/>
+    <path d="M 50 -20 Q 70 -30 70 -10 Q 70 10 50 0" fill="none" stroke="#00D9FF" stroke-width="6"/>
+
+    <!-- Star on trophy -->
+    <polygon points="0,-25 6,-10 22,-10 10,2 14,18 0,10 -14,18 -10,2 -22,-10 -6,-10" fill="#FF6B6B" stroke="#2D3436" stroke-width="1"/>
+  </g>
+
+  <!-- Football icons -->
+  <g transform="translate(60, 60)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#2D3436" stroke-width="2"/>
+    <path d="M -8 -5 L 0 -12 L 8 -5 L 5 5 L -5 5 Z" fill="#2D3436"/>
+  </g>
+  <g transform="translate(340, 60)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#2D3436" stroke-width="2"/>
+    <path d="M -8 -5 L 0 -12 L 8 -5 L 5 5 L -5 5 Z" fill="#2D3436"/>
+  </g>
+  <g transform="translate(60, 240)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#2D3436" stroke-width="2"/>
+    <path d="M -8 -5 L 0 -12 L 8 -5 L 5 5 L -5 5 Z" fill="#2D3436"/>
+  </g>
+  <g transform="translate(340, 240)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#2D3436" stroke-width="2"/>
+    <path d="M -8 -5 L 0 -12 L 8 -5 L 5 5 L -5 5 Z" fill="#2D3436"/>
+  </g>
+
+  <!-- Decorative confetti shapes -->
+  <rect x="80" y="100" width="15" height="15" fill="#FFD93D" transform="rotate(15 87 107)" opacity="0.7"/>
+  <circle cx="320" cy="200" r="8" fill="#00D9FF" opacity="0.7"/>
+  <polygon points="300,80 308,95 323,95 311,105 315,120 300,110 285,120 289,105 277,95 292,95" fill="#FF6B6B" opacity="0.7"/>
+
+  <!-- Text banner -->
+  <g transform="translate(200, 270)">
+    <rect x="-100" y="-15" width="200" height="30" rx="5" fill="#2D3436"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">COPA LIBERTADORES</text>
+  </g>
+</svg>

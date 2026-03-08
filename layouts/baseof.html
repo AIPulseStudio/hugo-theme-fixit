@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="keywords" content="{{ delimit .Site.Params.keywords ", " }}">
+    {{- if .Site.Params.googleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Params.googleAnalytics }}');
+    </script>
+    {{- end }}
+    {{- block "custom-head" . }}{{ end -}}
+  </head>
+  <body>
+    <div class="wrapper">
+      {{- partial "header.html" . -}}
+      <main class="main-container">
+        {{- block "content" . }}{{ end -}}
+      </main>
+      {{- partial "footer.html" . -}}
+    </div>
+    {{- block "custom-scripts" . }}{{ end -}}
+  </body>
+</html>
